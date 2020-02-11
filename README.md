@@ -164,4 +164,4 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 - password: vagrant
 ![](vagrant_ssh.jpg)
 - ssh vagrant@aws
-![](ssh_aws.jpg)
+![](ssh_aws.png)
