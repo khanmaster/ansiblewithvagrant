@@ -38,9 +38,9 @@ Let us walk through the architecture of our exercise
 ##Simple - Agentless - IT Automation Tool
 Ansible is a universal language, unravelling the mystery of how work gets done. Turn tough tasks into repeatable playbooks. Roll out enterprise-wide protocols with the push of a button.
 # How does it work
-### Simplicity - Ansible functions by connecting via SSH to the clients
-### Agentless – There is no need to install a server and an agent that will pull the changes from it.
-###Automation
+## Simplicity - Ansible functions by connecting via SSH to the clients
+## Agentless – There is no need to install a server and an agent that will pull the changes from it.
+### Automation
 Since it uses SSH, it can very easily connect to clients using SSH-Keys, simplifying through the whole process. Client details, like hostnames or IP addresses and SSH ports, are stored in files called inventory files. 
 Its actions/tasks are defined in YAML files called Playbooks
 # Why Ansible?
@@ -54,7 +54,7 @@ Create a cheat-sheet/go to guide for adhoc-commands, playbooks etc.
 
 Now we will install Ubuntu 18.04 LTS app on Windows
 Before we do that we need to enable some option on windows 
-- So right click on PowerShell to open it as an admin and run below command
+- Right click on PowerShell to open it as an admin and run below command
 - Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ## Next:
 Type Microsoft Store on your search bar next to windows button on bottom left
