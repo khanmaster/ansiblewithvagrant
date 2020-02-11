@@ -59,4 +59,109 @@ Before we do that we need to enable some option on windows
 ## Next:
 Type Microsoft Store on your search bar next to windows button on bottom left
 Search for Ubuntu 18.04 LTS– below snap is taken after it was installed
+![](Ubuntu.jpg)
+## Follow installation steps
+Restart and login to Ubuntu
 
+## Now Lets start from scratch by installing Ansible on Ubuntu distribution of Linux
+
+- sudo apt-get update
+- sudo apt-get install software-properties-common
+- sudo apt-add-repository ppa:ansible/ansible
+- sudo apt-get update
+- sudo apt-get install ansible
+press Y (yes) when prompted
+Complete the installation and check with below command
+- ansible –version
+![](Ansible_version.jpg)
+
+## Above screen shows it has been installed successfully! 
+
+- We will come back to Ansible once we have our Multi VMs environment ready.
+
+## Moving onto creating Multi server/VMs on Windows using Vagrant:
+
+You have practiced creating 1 VM and now lets take it to next level and use Ansible as provisioning tool in multi server environment  
+- We will now create 3 Servers/VMs, web , db and aws using vagrant on windows
+- We will use Ubuntu as an ansible controller
+
+## Open Git Bash and run it as an administrator
+In the same vagrantfile that you used to create 1 VM,  add the following code and comment out the previous code
+```ruby
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+
+# MULTI SERVER/VMs environment 
+#
+Vagrant.configure("2") do |config|
+
+# creating first VM called web  
+  config.vm.define "web" do |web|
+    
+    web.vm.box = "bento/ubuntu-18.04"
+   # downloading ubuntu 18.04 image
+
+    web.vm.hostname = 'web'
+    # assigning host name to the VM
+    
+    web.vm.network :private_network, ip: "192.168.33.10"
+    #   assigning private IP
+    
+    config.hostsupdater.aliases = ["development.web"]
+    # creating a link called development.web so we can access web page with this link instread of an IP   
+        
+    end
+  
+# creating second VM called db
+  config.vm.define "db" do |db|
+    
+    db.vm.box = "bento/ubuntu-18.04"
+    
+    db.vm.hostname = 'db'
+    
+    db.vm.network :private_network, ip: "192.168.33.11"
+    
+    config.hostsupdater.aliases = ["development.db"]     
+    end
+
+# creating third VM called aws 
+  config.vm.define "aws" do |aws|
+    
+    aws.vm.box = "bento/ubuntu-18.04"
+    
+    aws.vm.hostname = 'aws'
+    
+    aws.vm.network :private_network, ip: "192.168.33.12"
+    
+    config.hostsupdater.aliases = ["development.aws"] 
+   end
+end
+```
+- Save the and run below command
+- vagrant up
+- It will take few minutes to create 3 VMs
+- check the stastus with below command 
+- vagrant status 
+![](vagrant_status.jpg)
+![](VB_status.jpg)
+
+## Setup SSH keys/password in the host file.
+There are few different ways to set up connection and we will use the fast and easy set up to get going with actual Ansible provisioning.
+- Bit of a theory about SSH to have clear concept 
+- ssh-keygen command will generate rsa key pair
+- copy the key to server with below command
+- ssh-copy-id root@host
+- ssh-copy-id uses the SSH protocol to connect to the target host and upload the SSH user key.
+The command edits the authorised keys file on the server. It creates the .ssh directory if it doesn't exist. It creates the authorized keys file if it doesn't exist. Effectively, ssh key copied to server.
+
+- SSH into our VMs 
+- ssh vagrant@ip – ssh vagrant@192.168.33.10 or ssh vagrant@192.168.33.11
+- ssh vagrant@db ssh varant@web
+- password: vagrant
+![](vagrant_ssh.jpg)
+- ssh vagrant@aws
+![](ssh_aws.jpg)
