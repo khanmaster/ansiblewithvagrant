@@ -1,9 +1,9 @@
-## Infra Structure as Code - Ansible
+# Infra Structure as Code - Ansible
  ## Understanding Infra Structure as Code (Iac) concepts with Ansible Provisioning
 
 Timings 90-120 Minutes
 
-# This Lesson Includes
+## This Lesson Includes
 - Pre-requisites
 - None
 
