@@ -32,4 +32,4 @@ Infrastructure as code (IaC) is the way of defining computing and network infras
 The guiding principle behind IaC is to enforce consistency among DevOps team members by representing the desired state of their infrastructure via code. Moreover, the code can be kept in source control, which means it can be audited, tested on, and used to create reproducible builds with continuous delivery.
 
 Let us walk through the architecture of our exercise 
-![](c:Users/ahskhan/tree.png)
+![](Ansible/tree.png)
