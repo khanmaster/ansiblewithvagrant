@@ -27,10 +27,8 @@ Timings 90-120 Minutes
 
 ## What is “Infrastructure As Code” (IaC)?
 Infrastructure as code (IaC) is the way of defining computing and network infrastructure through source code, the same way you do for applications. Rather than manually configuring your infrastructure or using a one-off isolated script, IaC gives you the power to write code, using a high-level language, to decide how infrastructure should be configured and deployed.
-## Difference 
- IaC is different from infrastructure automation, which involves repeating the steps multiple times and spawning them on several  servers.
 
-## Why IAC 
+## Why Infra Sturcture as Code (IaC) 
 The guiding principle behind IaC is to enforce consistency among DevOps team members by representing the desired state of their infrastructure via code. Moreover, the code can be kept in source control, which means it can be audited, tested on, and used to create reproducible builds with continuous delivery.
 
 Let us walk through the architecture of our exercise 
