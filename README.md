@@ -205,9 +205,17 @@ WOW! We have successfully created multi-server/client environment!
 192.168.33.12 ansible_connection=ssh ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
  ```
 - In the Ansible hosts file we have three servers web, db and aws
-- The IPs must match the hardcoded IPs defined our vagrantfile to connect via SSH
+- The IPs must match the hardcoded IPs defined in our vagrantfile to connect via SSH
 - ansible_connection=ssh enables ansible to connect to the server with ssh key or password
 - ansible_ssh_user=vagrant and ansible_ssh_pass=vagrant enable to connect to VMs with user ID vagrant and password vagrant
-
 ![](ansible_hosts.jpg)
+
+## Now let us check if we can ping our servers
+- Use this Command: ping 192.168.33.10
+- Use this Command: ping 192.168.33.11
+
+![](ping_command.jpg)
+
+
+
 
