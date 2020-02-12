@@ -218,15 +218,16 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 - Great! It worked
 
 ## Lets move on to Ansible Ad-hoc commands
-- Ping all servers/target hosts to check the status Check the connection/status:
+- Ping all servers/target hosts Check the connection/status:
 - command: ``` ansible all -m ping ```
 ![](ansible_ping_all.png)
-- Amazing! We got Pong in renponse of our Ping with a success message from all our servers
+- Amazing! We got a Pong in renponse of our Ping with a success message from all our servers
+- -m is the module.
 
-- -m is the module to Check the name/version of all hosts OS machines
-Command: ```ansible all -a "uname -a"```
+- To Check the name/version of all hosts OS machines
+- Command: ```ansible all -a "uname -a"```
 - -a should contain the command it should run which goes as an argument to command and shell.
 ![](ansible_all_uname.png)
-- This is very useful command find out the name and version of all Servers connected before performing any actions 
+- This is very useful command to find out the name and version of all Servers connected with Ansible, before performing any actions 
 
 
