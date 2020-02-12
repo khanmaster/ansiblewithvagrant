@@ -192,3 +192,16 @@ WOW! We have successfully created multi-server/client environment!
 - Now go to cd/etc/ansible$
 - Type ```tree``` to see the file tree of ansible directory
 ![](tree.jpg)
+
+- Ansible Inventory file - In the Ansible terminology, an inventory is a file where the target hosts of our actions are specified.
+- Its default path is /etc/ansible/hosts
+- Open hosts file and add following entry 
+``` bash [web]
+192.168.33.10 ansible_connection=ssh ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+[db]
+192.168.33.11 ansible_connection=ssh ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+[aws]
+192.168.33.12 ansible_connection=ssh ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+``` end
+
+
