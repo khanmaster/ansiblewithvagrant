@@ -251,3 +251,24 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 - How to check existing directories in all our servers using command inside the VMs shell 
 - command: ``` ansible all -m shell -a "ls -a" ```
 ![](check_dir.png)
+
+## Amazing isn’t it! How smartly we have been communicating with our VMs with Ansible using Ansible Ad-hoc commands
+- There are plenty more Ad-hoc commands available on Ansible doc page
+- ```https://docs.ansible.com/ansible/latest/user_guide/intro_adhoc.html``` 
+
+Now its time to move onto next level to create and use Ansible Playbooks
+
+# Ansible Playbooks
+## Playbooks are a completely different way to use ansible than in ad-hoc task execution mode, and are particularly powerful. 
+- Playbooks are written in ```YAML Yet Another Mark up Language```, which is easier to understand than a JSON or XML file.
+- Each task in the playbook is executed sequentially for each host in the inventory file before moving on to the next task.
+- Ansible Playbooks are composed of one or more plays and offer more advanced functionality for sending tasks to managed host compared  to running many ad-hoc commands. 
+- Let’s create a simple Ansible playbook example that will install Nginx and a MySQL server on the managed hosts that we had already defined in the host file.
+- To be more precised, we want Nginx installed on hosts in the web group and a MySQL server installed in the db group.
+- Playbooks are reusable with simple modification.
+- we will install nginx and mysql on aws from one playbook
+- Finally its show time for the class
+
+- create a 1 playbook to install nginx on db, install mysql on web and both packages on aws
+- update and upgrade the packages on all the servers
+
