@@ -300,6 +300,13 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 - Run the playbook with this command:``` ansible-playbook playbook_installmysql.yml ```
 ![](playbook_mysql.png)
 
+- Mysql has been installed on db server, now lets login to db server from our Ansible machine via ssh
+- ```ssh vagrant@db```
+- Enter the passord: ```vagrant```
+- Verfiy if mysql has been installed with this command: mysql --version
+![](verify_msql.png)
+Great! 
+
 - Its show time
 ## Exercise:
 - Playbooks are reusable with simple modification.
