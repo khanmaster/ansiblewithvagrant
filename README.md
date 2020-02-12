@@ -4,7 +4,7 @@
 
 - Pre-requisites
 - Virtual Box on windows
-- Vagrant Installe
+- Vagrant Installed
 
 Timings 90-120 Minutes
 
@@ -24,9 +24,9 @@ Timings 90-120 Minutes
 - Ansible Ad-hoc Commands 
 - Understanding Ansible file Directory/file Tree
 - Ansible Inventory file, Playbook, tasks and Module 
-- Basic overview of YAML YET ANOTHER MARKUP LANGUAGE syntax and intendation  
+- Basic overview of YAML YET ANOTHER MARKUP LANGUAGE syntax and indentation  
 - Creating and running a playbook - Infra structure as code (IAC) example
-- Installing MySQL and Nginx to multi servers using Playbooks
+- Installing MySQL and Nginx to multi servers using Ansible Playbooks
 
 ## What is “Infrastructure As Code” (IaC)?
 Infrastructure as code (IaC) is the way of defining computing and network infrastructure through source code, the same way you do for applications. Rather than manually configuring your infrastructure or using a one-off isolated script, IaC gives you the power to write code, using a high-level language, to decide how infrastructure should be configured and deployed.
@@ -40,18 +40,23 @@ Let us walk through the architecture of our exercise
 # What is Ansible
 ## Simple - Agentless - IT Automation Tool
 Ansible is a universal language, unravelling the mystery of how work gets done. Turn tough tasks into repeatable playbooks. Roll out enterprise-wide protocols with the push of a button.
+
 # How does it work
 ## Simplicity - Ansible functions by connecting via SSH to the clients
+
 ## Agentless – There is no need to install a server and an agent that will pull the changes from it.
-### Automation
+
+## Automation
 Since it uses SSH, it can very easily connect to clients using SSH-Keys, simplifying through the whole process. Client details, like hostnames or IP addresses and SSH ports, are stored in files called inventory files. 
 Its actions/tasks are defined in YAML files called Playbooks
+
 # Why Ansible?
 ## It is Vital to know why should we use Ansible
 
 With its simplicity, ease-of-use, broad compatibility with most major cloud, database, network, storage, and identity providers amongst other categories.
 Ansible has been a popular choice of Engineering teams for configuration-management since 2012. 
 Ansible can be used as a source control tool.
+
 - Best thing about Ansible is that you do not need to have advance scripting knowledge.
 
 ## How does it fit into DevOps culture and practices
@@ -76,8 +81,7 @@ Before we do that we need to enable some option on windows
 Restart and login to Ubuntu
 
 # Installing Ansible on Ubuntu
-## Now Lets start from scratch by installing Ansible on Ubuntu distribution of Linux
-
+## Now Lets start from scratch 
 - sudo apt-get update
 - sudo apt-get install software-properties-common
 - sudo apt-add-repository ppa:ansible/ansible
@@ -92,9 +96,9 @@ Restart and login to Ubuntu
 
 - We will come back to Ansible once we have our Multi VMs environment ready.
 
-## Moving onto creating Multi server/VMs on Windows using Vagrant:
+## Moving onto creating Multi Server/VMs on Windows using Vagrant:
 
-You have practiced creating 1 VM and now lets take it to next level and use Ansible as provisioning tool in multi server environment  
+You have practiced creating 1 VM and now lets take it to next level and use Ansible as provisioning and configuration management tool in multi server environment  
 - We will now create 3 Servers/VMs, web , db and aws using vagrant on windows
 - We will use Ubuntu as an ansible controller
 
@@ -154,7 +158,7 @@ Vagrant.configure("2") do |config|
    end
 end
 ```
-- Save the and run below command
+- Save the code in vagrantfile and run below command
 - vagrant up
 - It will take few minutes to create 3 VMs
 - check the stastus with below command 
@@ -169,7 +173,7 @@ There are few different ways to set up connection and we will use the fast and e
 - copy the key to server with below command
 - ssh-copy-id root@host
 - ssh-copy-id uses the SSH protocol to connect to the target host and upload the SSH user key.
-The command edits the authorised keys file on the server. It creates the .ssh directory if it doesn't exist. It creates the authorized keys file if it doesn't exist. Effectively, ssh key copied to server.
+The command edits the authorised keys file on the server. It creates the .ssh directory if it doesn't exist. It creates the authorised keys file if it doesn't exist. Effectively, ssh key copied to server.
 
 - SSH into our VMs 
 - ssh vagrant@ip – ssh vagrant@192.168.33.10 or ssh vagrant@192.168.33.11
