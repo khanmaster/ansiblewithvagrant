@@ -1,11 +1,14 @@
-# Infra Structure as Code - Ansible
+# Infra Structure as Code - Ansible Configuration Management
+
  ## Understanding Infra Structure as Code (Iac) concepts with Ansible Provisioning
+
+- Pre-requisites
+- Virtual Box on windows
+- Vagrant Installe
 
 Timings 90-120 Minutes
 
 ## This Lesson Includes
-- Pre-requisites
-- None
 
 - What is Infra structure As Code (IaC)
 - Create a Git Hub Repository
@@ -35,7 +38,7 @@ Let us walk through the architecture of our exercise
 ![](https://github.com/spartaglobal/Ansible/blob/master/IAC_Architecture.png)
 
 # What is Ansible
-##Simple - Agentless - IT Automation Tool
+## Simple - Agentless - IT Automation Tool
 Ansible is a universal language, unravelling the mystery of how work gets done. Turn tough tasks into repeatable playbooks. Roll out enterprise-wide protocols with the push of a button.
 # How does it work
 ## Simplicity - Ansible functions by connecting via SSH to the clients
@@ -44,25 +47,35 @@ Ansible is a universal language, unravelling the mystery of how work gets done. 
 Since it uses SSH, it can very easily connect to clients using SSH-Keys, simplifying through the whole process. Client details, like hostnames or IP addresses and SSH ports, are stored in files called inventory files. 
 Its actions/tasks are defined in YAML files called Playbooks
 # Why Ansible?
+## It is Vital to know why should we use Ansible
+
 With its simplicity, ease-of-use, broad compatibility with most major cloud, database, network, storage, and identity providers amongst other categories.
 Ansible has been a popular choice of Engineering teams for configuration-management since 2012. 
-Ansible can be used as a source control tool. - No need to have scripting knowledge.
-The growing predominance of multi-cloud and hybrid cloud architectures, Ansible provides a common platform for enabling mature DevOps and infrastructure as code practices.
-Ansible is easily integrated with higher-level orchestration systems, such as AWS Code-Build, Jenkins, or Red Hat.
-## Best Practices -  Create a new Git hub repo for ansible
-Create a cheat-sheet/go to guide for adhoc-commands, playbooks etc.
+Ansible can be used as a source control tool.
+- Best thing about Ansible is that you do not need to have advance scripting knowledge.
 
+## How does it fit into DevOps culture and practices
+- The growing predominance of multi-cloud and hybrid cloud architectures
+- Ansible provides a common platform for enabling mature DevOps and infrastructure as code practices.
+- Ansible is easily integrated with higher-level orchestration systems, such as AWS Code-Build, Jenkins, or Red Hat.
+
+## Best Practices -  Create a new Git Hub Repository for Ansible
+- Create a cheat-sheet/go to guide for adhoc-commands, playbooks etc. this will build your Git Hub profile and history
+
+## Installation of Ubuntu 18.04 LTS on Windows
 Now we will install Ubuntu 18.04 LTS app on Windows
 Before we do that we need to enable some option on windows 
 - Right click on PowerShell to open it as an admin and run below command
 - Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
 ## Next:
-Type Microsoft Store on your search bar next to windows button on bottom left
-Search for Ubuntu 18.04 LTS– below snap is taken after it was installed
+- Type Microsoft Store on your search bar next to windows button on bottom left
+- Search for Ubuntu 18.04 LTS– below snap is taken after it was installed
 ![](Ubuntu.jpg)
 ## Follow installation steps
 Restart and login to Ubuntu
 
+# Installing Ansible on Ubuntu
 ## Now Lets start from scratch by installing Ansible on Ubuntu distribution of Linux
 
 - sudo apt-get update
@@ -70,8 +83,8 @@ Restart and login to Ubuntu
 - sudo apt-add-repository ppa:ansible/ansible
 - sudo apt-get update
 - sudo apt-get install ansible
-press Y (yes) when prompted
-Complete the installation and check with below command
+- press Y (yes) when prompted
+- Complete the installation and check with below command
 - ansible –version
 ![](Ansible_version.jpg)
 
