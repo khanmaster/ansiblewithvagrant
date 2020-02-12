@@ -255,15 +255,16 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 ## Amazing isn’t it! How smartly we have been communicating with our VMs with Ansible using Ansible Ad-hoc commands
 - There are plenty more Ad-hoc commands available on Ansible doc page
 - ```https://docs.ansible.com/ansible/latest/user_guide/intro_adhoc.html``` 
+## The best advantage of Ansible is that it is agentless, therefore we did not need to install Ansible or any dependencies on our servers/VMs and we still successfully run various different commands on the servers from our Ansible machine.
 
-Now its time to move onto next level to create and use Ansible Playbooks
+- Now its time to move onto next level to create and use Ansible Playbooks
 
 # Ansible Playbooks
 ## Playbooks are a completely different way to use ansible than in ad-hoc task execution mode, and are particularly powerful. 
 - Playbooks are written in ```YAML Yet Another Mark up Language```, which is easier to understand than a JSON or XML file.
 - Each task in the playbook is executed sequentially for each host in the inventory file before moving on to the next task.
 - Ansible Playbooks are composed of one or more plays and offer more advanced functionality for sending tasks to managed host compared  to running many ad-hoc commands. 
-- Let’s create a simple Ansible playbook example that will installMySQL server on the managed hosts that we had already defined in the host file.
+- Let’s create a simple Ansible playbook example that will installMySQL on the managed hosts that we had already defined in the host file.
 ``` 
 # This is an example of ansible playbook written in YMAL
 
@@ -272,12 +273,12 @@ Now its time to move onto next level to create and use Ansible Playbooks
 # In this example we are targeting server called db
 
 - hosts: db
-# host is to define the name of your host machine, group or all servers
+# hosts is to define the name of your host machine, group or all servers
  
  gather_facts: yes
 # gethering facts before performing any tasks
  
- become: true
+  become: true
  # become is used to get root permission to perform any tasks that may require admin access
  
  #Tasks are executed in order, one at a time, against all Servers matched by the host pattern
@@ -291,16 +292,17 @@ Now its time to move onto next level to create and use Ansible Playbooks
 
 # The goal of each task is to execute a module, with very specific arguments.
 
+- # TOP TIP: Be mindful of the INDENTATION of syntax in YML
+  
+
 ```
-- save the file as playbook_installmysql.yml
-- run the play with this command:``` ansible-playbook playbook_installmysql.yml
+- Save the file as playbook_installmysql.yml in ```/etc/ansible```
+- Run the playbook with this command:``` ansible-playbook playbook_installmysql.yml ```
 
-- To be more precised, we want Nginx installed on hosts in the web group and a MySQL server installed in the db group.
+- Its show time for the class
+## Exercise:
+
 - Playbooks are reusable with simple modification.
-- we will install nginx and mysql on aws from one playbook
-
-- Finally its show time for the class
-
-- Create a 1 playbook to install nginx on db, install mysql on web and both packages on aws
-- Update and upgrade the packages on all the servers
+- Create 1 playbook to install nginx on db, install mysql on web server and both packages on aws server
+- In same playbook update and upgrade the packages on all the servers
 
