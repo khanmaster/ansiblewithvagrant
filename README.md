@@ -225,7 +225,7 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 - -m is the module.
 - How can we ping a particular server
 - ``` ansible aws -m ping ```
-![](ping_all_server.png)
+![](ping_particular_server.png)
 
 - To Check the name/version of all hosts OS machines
 - Command: ```ansible all -a "uname -a"```
