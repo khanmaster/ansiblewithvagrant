@@ -71,7 +71,7 @@ Ansible can be used as a source control tool.
 Now we will install Ubuntu 18.04 LTS app on Windows and 
 Before we do that we need to enable some option on windows 
 - Right click on PowerShell to open it as an admin and run below command
-- Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+- ``` Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux ```
 
 ## Next:
 - Type Microsoft Store on your search bar next to windows button on bottom left
@@ -82,14 +82,14 @@ Restart and login to Ubuntu
 
 # Installing Ansible on Ubuntu
 ## Now Lets start from scratch 
-- sudo apt-get update
-- sudo apt-get install software-properties-common
-- sudo apt-add-repository ppa:ansible/ansible
-- sudo apt-get update
-- sudo apt-get install ansible
+- ``` sudo apt-get update ```
+- ``` sudo apt-get install software-properties-common ```
+- ``` sudo apt-add-repository ppa:ansible/ansible ```
+- ``` sudo apt-get update ```
+- ``` sudo apt-get install ansible ```
 - press Y (yes) when prompted
 - Complete the installation and check with below command
-- ansible –version
+- ``` ansible –version```
 ![](Ansible_version.jpg)
 
 ## Above screen shows it has been installed successfully! 
@@ -176,25 +176,25 @@ There are few different ways to set up connection and we will use the fast and e
 The command edits the authorised keys file on the server. It creates the .ssh directory if it doesn't exist. It creates the authorised keys file if it doesn't exist. Effectively, ssh key copied to server.
 
 - SSH into our VMs 
-- ssh vagrant@ip – ssh vagrant@192.168.33.10 or ssh vagrant@192.168.33.11
-- ssh vagrant@db ssh varant@web
-- password: vagrant
+- ssh vagrant@ip – ````ssh vagrant@192.168.33.10 or ssh vagrant@192.168.33.11```
+- ```ssh vagrant@db```  ```ssh varant@web```
+- password: ```vagrant```
 ![](vagrant_ssh.jpg)
-- ssh vagrant@aws
+- ```ssh vagrant@aws```
 ![](ssh_aws.png)
 
-WOW! We have successfully created multi-server/client environment!
+- WOW! We have successfully created multi-server/client environment!
 
 ## Back to Ansible now
 - back to Ubuntu shell 
 - install tree with ```sudo apt install tree ```
 
-- Now go to cd/etc/ansible$
+- Now go to ``` cd/etc/ansible$```
 - Type ```tree``` to see the file tree of ansible directory
 ![](tree.jpg)
 
 - Ansible Inventory file - In the Ansible terminology, an inventory is a file where the target hosts of our actions are specified.
-- Its default path is /etc/ansible/hosts
+- Its default path is ```/etc/ansible/hosts```
 - Open hosts file and add following entry 
 ``` bash 
 [web]
@@ -206,8 +206,8 @@ WOW! We have successfully created multi-server/client environment!
  ```
 - In the Ansible hosts file we have three servers web, db and aws
 - The IPs must match the hardcoded IPs defined in our vagrantfile to connect via SSH
-- ansible_connection=ssh enables ansible to connect to the server with ssh key or password
-- ansible_ssh_user=vagrant and ansible_ssh_pass=vagrant enable to connect to VMs with user ID vagrant and password vagrant
+- ``` ansible_connection=ssh ``` enables ansible to connect to the server with ssh key or password
+- ``` ansible_ssh_user=vagrant``` ansible_ssh_pass=vagrant``` enable to connect to VMs with user ID vagrant and password vagrant
 ![](ansible_hosts.jpg)
 
 ## Now let us check if we can ping our servers
