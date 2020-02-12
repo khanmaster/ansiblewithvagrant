@@ -233,4 +233,18 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 ![](ansible_all_uname.png)
 - This is very useful command to find out the name and version of all Servers connected with Ansible, before performing any actions 
 
+## So when do we actually need to utilise these quick Ad-hoc commands in Real life scenario?
+- If we have multiple servers running in different parts of the world and you need to perform some tasks out of business hours in each country/location.
+- You will need to check few things before hand
+- Such as date and time in each of the zone before start to perform any tasks
+- Command to check date and time: ```ansible all -a "date"```
+![](ansible_date.png)
 
+- You have been tasked to install mysql on all servers or 1 server
+- What pre checks would be needed to get done ``` Memory availability``` ```disk available space``` etc.
+## How to Check the memory on host servers with Ad-hoc commands
+- The following ansible ad hoc command would help you get the free memory of all the hosts in the single or all hosts/servers .
+- As you could see we are running the free -m command on the remote hosts and collecting the information.
+- This is ```best practice``` to check the available space before installing any packages.
+- command: ```ansible all -a "free -a"```
+![](free_memory.png)
