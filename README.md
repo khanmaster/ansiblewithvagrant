@@ -303,13 +303,17 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 - Mysql has been installed on db server, now lets login to db server from our Ansible machine via ssh
 - ```ssh vagrant@db```
 - Enter the passord: ```vagrant```
-- Verfiy if mysql has been installed with this command: mysql --version
+- Verfiy if mysql has been installed with this command: ```mysql --version```
 ![](verify_mysql.png)
-Great! 
+## Great! 
 
-- Its show time
-## Exercise:
+# Its show time
 - Playbooks are reusable with simple modification.
-- Create 1 playbook to install nginx on db, install mysql on web server and both packages on aws server
-- In same playbook update and upgrade the packages on all the servers
+
+## Exercise:
+- Create 1 playbook to install:
+- Nginx on db server
+- Mysql on web server
+- Both packages on aws server
+- Update and upgrade the packages on all the servers
 
