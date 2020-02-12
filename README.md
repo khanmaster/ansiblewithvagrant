@@ -298,10 +298,10 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 ```
 - Save the file as playbook_installmysql.yml in ```/etc/ansible```
 - Run the playbook with this command:``` ansible-playbook playbook_installmysql.yml ```
+![](playbook_mysql.png)
 
-- Its show time for the class
+- Its show time
 ## Exercise:
-
 - Playbooks are reusable with simple modification.
 - Create 1 playbook to install nginx on db, install mysql on web server and both packages on aws server
 - In same playbook update and upgrade the packages on all the servers
