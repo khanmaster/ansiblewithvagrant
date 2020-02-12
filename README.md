@@ -68,7 +68,7 @@ Ansible can be used as a source control tool.
 - Create a cheat-sheet/go to guide for adhoc-commands, playbooks etc. this will build your Git Hub profile and history
 
 ## Installation of Ubuntu 18.04 LTS on Windows
-Now we will install Ubuntu 18.04 LTS app on Windows
+Now we will install Ubuntu 18.04 LTS app on Windows and 
 Before we do that we need to enable some option on windows 
 - Right click on PowerShell to open it as an admin and run below command
 - Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
@@ -182,3 +182,13 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 ![](vagrant_ssh.jpg)
 - ssh vagrant@aws
 ![](ssh_aws.png)
+
+WOW! We have successfully created multi-server/client environment!
+
+## Back to Ansible now
+- back to Ubuntu shell 
+- install tree with ```sudo apt install tree ```
+
+- Now go to cd/etc/ansible$
+- Type ```tree``` to see the file tree of ansible directory
+![](tree.jpg)
