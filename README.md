@@ -159,20 +159,20 @@ Vagrant.configure("2") do |config|
 end
 ```
 - Save the code in vagrantfile and run below command
-- vagrant up
+- ```vagrant up```
 - It will take few minutes to create 3 VMs
 - check the stastus with below command 
-- vagrant status 
+- ```vagrant status``` 
 ![](vagrant_status.jpg)
 ![](VB_status.jpg)
 
 ## Setup SSH keys/password in the host file.
 There are few different ways to set up connection and we will use the fast and easy set up to get going with actual Ansible provisioning.
 - Bit of a theory about SSH to have clear concept 
-- ssh-keygen command will generate rsa key pair
+- ```ssh-keygen``` command will generate rsa key pair
 - copy the key to server with below command
-- ssh-copy-id root@host
-- ssh-copy-id uses the SSH protocol to connect to the target host and upload the SSH user key.
+- ```ssh-copy-id``` root@host
+- ```ssh-copy-id``` uses the SSH protocol to connect to the target host and upload the SSH user key.
 The command edits the authorised keys file on the server. It creates the .ssh directory if it doesn't exist. It creates the authorised keys file if it doesn't exist. Effectively, ssh key copied to server.
 
 - SSH into our VMs 
@@ -189,7 +189,7 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 - back to Ubuntu shell 
 - install tree with ```sudo apt install tree ```
 
-- Now go to ``` cd/etc/ansible$```
+- Now go to ``` cd /etc/ansible$```
 - Type ```tree``` to see the file tree of ansible directory
 ![](tree.jpg)
 
@@ -215,7 +215,7 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 - Use this Command: ``` ping 192.168.33.11 ```
 
 ![](ping_command.jpg)
-- Great! It worked
+- Great!
 
 ## Lets move on to Ansible Ad-hoc commands
 - Ping all servers/target hosts Check the connection/status:
@@ -240,26 +240,28 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 - Command to check date and time: ```ansible all -a "date"```
 ![](ansible_date.png)
 
-- You have been tasked to install mysql on all servers or 1 server
-- What pre checks would be needed to get done ``` Memory availability``` ```disk available space``` etc.
+- if you have been tasked to install mysql on all servers or 1 server
+- What pre checks would be required to get done ``` Memory availability``` ```disk available space``` etc.
 ## How to Check the memory on host servers with Ad-hoc commands
-- The following ansible ad hoc command would help you get the free memory of all the hosts in the single or all hosts/servers .
+- The following ansible ad-hoc command would help you get the desired outcome of all the hosts in the single or all hosts/servers .
 - As you could see we are running the free -m command on the remote hosts and collecting the information.
 - This is ```best practice``` to check the available space before installing any packages.
 - command: ```ansible all -a "free -a"```
 ![](free_memory.png)
-- How to check existing directories in all our servers using command inside the VMs shell 
+- How to check existing directories in all our servers using command inside the VMs shell from Ansible machine 
 - command: ``` ansible all -m shell -a "ls -a" ```
 ![](check_dir.png)
 
-## Amazing isn’t it! How smartly we have been communicating with our VMs with Ansible using Ansible Ad-hoc commands
+## Amazing isn’t it! How smartly we have been communicating with our VMs with Ansible using Ad-hoc commands
 - There are plenty more Ad-hoc commands available on Ansible doc page
 - ```https://docs.ansible.com/ansible/latest/user_guide/intro_adhoc.html``` 
-## The best advantage of Ansible is that it is agentless, therefore we did not need to install Ansible or any dependencies on our servers/VMs and we still successfully run various different commands on the servers from our Ansible machine.
+
+## The best advantage of Ansible is that it is agentless, therefore we did not need to install Ansible or any dependencies on our servers/VMs and we still successfully ran various different commands on the servers from our Ansible machine.
 
 - Now its time to move onto next level to create and use Ansible Playbooks
 
 # Ansible Playbooks
+
 ## Playbooks are a completely different way to use ansible than in ad-hoc task execution mode, and are particularly powerful. 
 - Playbooks are written in ```YAML Yet Another Mark up Language```, which is easier to understand than a JSON or XML file.
 - Each task in the playbook is executed sequentially for each host in the inventory file before moving on to the next task.
