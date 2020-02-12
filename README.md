@@ -219,8 +219,8 @@ WOW! We have successfully created multi-server/client environment!
 
 ## Lets move on to Ansible Ad-hoc commands
 - Ping all servers/target hosts to check the status Check the connection/status:
-- command ansible all -m ping
-![](ansible_ping_all)
+- command: ``` ansible all -m ping ```
+![](ansible_ping_all.png)
 
 
 
