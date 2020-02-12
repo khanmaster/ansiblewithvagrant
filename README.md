@@ -196,12 +196,17 @@ WOW! We have successfully created multi-server/client environment!
 - Ansible Inventory file - In the Ansible terminology, an inventory is a file where the target hosts of our actions are specified.
 - Its default path is /etc/ansible/hosts
 - Open hosts file and add following entry 
-``` bash [web]
+``` bash 
+[web]
 192.168.33.10 ansible_connection=ssh ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
 [db]
 192.168.33.11 ansible_connection=ssh ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
 [aws]
 192.168.33.12 ansible_connection=ssh ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
-``` end
-
+ ```
+- In the Ansible hosts file we have three servers web, db and aws
+- The IPs must match the hardcoded IPs in our vagrantfile to connect via SSH
+- ansible_connection=ssh enables ansible to connect to the server with ssh key or password
+- ansible_ssh_user=vagrant and ansible_ssh_pass=vagrant enable to connect to VMs with user ID vagrant and password vagrant
+![](
 
