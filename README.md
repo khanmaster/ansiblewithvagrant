@@ -263,12 +263,44 @@ Now its time to move onto next level to create and use Ansible Playbooks
 - Playbooks are written in ```YAML Yet Another Mark up Language```, which is easier to understand than a JSON or XML file.
 - Each task in the playbook is executed sequentially for each host in the inventory file before moving on to the next task.
 - Ansible Playbooks are composed of one or more plays and offer more advanced functionality for sending tasks to managed host compared  to running many ad-hoc commands. 
-- Let’s create a simple Ansible playbook example that will install Nginx and a MySQL server on the managed hosts that we had already defined in the host file.
+- Let’s create a simple Ansible playbook example that will installMySQL server on the managed hosts that we had already defined in the host file.
+``` 
+# This is an example of ansible playbook written in YMAL
+
+# YAML FILE STARTS WITH THREE --- DASHES(---)
+---
+# In this example we are targeting server called db
+
+- hosts: db
+# host is to define the name of your host machine, group or all servers
+ 
+ gather_facts: yes
+# gethering facts before performing any tasks
+ 
+ become: true
+ # become is used to get root permission to perform any tasks that may require admin access
+ 
+ #Tasks are executed in order, one at a time, against all Servers matched by the host pattern
+# Every task should have a name, which is included in the output from running the playbook
+
+  tasks:
+  - name: Install mysql
+  
+    # installing Mysql on db
+    apt: pkg=mysql-server state=present
+
+# The goal of each task is to execute a module, with very specific arguments.
+
+```
+- save the file as playbook_installmysql.yml
+- run the play with this command:``` ansible-playbook playbook_installmysql.yml
+
 - To be more precised, we want Nginx installed on hosts in the web group and a MySQL server installed in the db group.
 - Playbooks are reusable with simple modification.
 - we will install nginx and mysql on aws from one playbook
+
 - Finally its show time for the class
 
-- create a 1 playbook to install nginx on db, install mysql on web and both packages on aws
-- update and upgrade the packages on all the servers
+- Create a 1 playbook to install nginx on db, install mysql on web and both packages on aws
+- Update and upgrade the packages on all the servers
 
