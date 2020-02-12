@@ -249,5 +249,5 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 - command: ```ansible all -a "free -a"```
 ![](free_memory.png)
 - How to check existing directories in all our servers using command inside the VMs shell 
-command: ``` ansible all -m shell -a "ls -a" ```
+- command: ``` ansible all -m shell -a "ls -a" ```
 ![](check_dir.png)
