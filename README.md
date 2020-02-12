@@ -312,7 +312,7 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 # Its show time
 - Playbooks are reusable with simple modification.
 
-## Exercise:
+## Exercise: 20 minutes
 - Create 1 playbook to install:
 - Nginx on db server
 - Mysql on web server
