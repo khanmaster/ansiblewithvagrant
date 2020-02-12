@@ -304,7 +304,7 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 - ```ssh vagrant@db```
 - Enter the passord: ```vagrant```
 - Verfiy if mysql has been installed with this command: mysql --version
-![](verify_msql.png)
+![](verify_mysql.png)
 Great! 
 
 - Its show time
