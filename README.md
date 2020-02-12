@@ -223,6 +223,9 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 ![](ansible_ping_all.png)
 - Amazing! We got a Pong in renponse of our Ping with a success message from all our servers
 - -m is the module.
+- How can we ping a particular server
+- ``` ansible aws -m ping ```
+![](ping_all_server.png)
 
 - To Check the name/version of all hosts OS machines
 - Command: ```ansible all -a "uname -a"```
