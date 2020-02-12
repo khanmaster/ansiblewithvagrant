@@ -215,7 +215,12 @@ WOW! We have successfully created multi-server/client environment!
 - Use this Command: ping 192.168.33.11
 
 ![](ping_command.jpg)
+- Great! It worked
 
+## Lets move on to Ansible Ad-hoc commands
+- Ping all servers/target hosts to check the status Check the connection/status:
+- command ansible all -m ping
+![](ansible_ping_all)
 
 
 
