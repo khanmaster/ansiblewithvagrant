@@ -209,5 +209,5 @@ WOW! We have successfully created multi-server/client environment!
 - ansible_connection=ssh enables ansible to connect to the server with ssh key or password
 - ansible_ssh_user=vagrant and ansible_ssh_pass=vagrant enable to connect to VMs with user ID vagrant and password vagrant
 
-![](ansible_hosts)
+![] (ansible_hosts)
 
