@@ -211,8 +211,8 @@ WOW! We have successfully created multi-server/client environment!
 ![](ansible_hosts.jpg)
 
 ## Now let us check if we can ping our servers
-- Use this Command: ping 192.168.33.10
-- Use this Command: ping 192.168.33.11
+- Use this Command: ``` ping 192.168.33.10 ```
+- Use this Command: ``` ping 192.168.33.11 ```
 
 ![](ping_command.jpg)
 - Great! It worked
