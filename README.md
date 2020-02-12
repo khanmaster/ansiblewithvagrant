@@ -89,7 +89,7 @@ Restart and login to Ubuntu
 - ``` sudo apt-get install ansible ```
 - press Y (yes) when prompted
 - Complete the installation and check with below command
-- ``` ansible –version```
+- ``` ansible –version ```
 ![](Ansible_version.jpg)
 
 ## Above screen shows it has been installed successfully! 
@@ -176,8 +176,8 @@ There are few different ways to set up connection and we will use the fast and e
 The command edits the authorised keys file on the server. It creates the .ssh directory if it doesn't exist. It creates the authorised keys file if it doesn't exist. Effectively, ssh key copied to server.
 
 - SSH into our VMs 
-- ssh vagrant@ip – ````ssh vagrant@192.168.33.10 or ssh vagrant@192.168.33.11```
-- ```ssh vagrant@db```  ```ssh varant@web```
+- ssh vagrant@ip – ``` ssh vagrant@192.168.33.10 or ssh vagrant@192.168.33.11 ```
+- ``` ssh vagrant@db ```  ``` ssh varant@web ```
 - password: ```vagrant```
 ![](vagrant_ssh.jpg)
 - ```ssh vagrant@aws```
@@ -207,7 +207,7 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 - In the Ansible hosts file we have three servers web, db and aws
 - The IPs must match the hardcoded IPs defined in our vagrantfile to connect via SSH
 - ``` ansible_connection=ssh ``` enables ansible to connect to the server with ssh key or password
-- ``` ansible_ssh_user=vagrant``` ansible_ssh_pass=vagrant``` enable to connect to VMs with user ID vagrant and password vagrant
+- ``` ansible_ssh_user=vagrant``` ```ansible_ssh_pass=vagrant``` enable you to connect to VMs with user ID vagrant and password vagrant
 ![](ansible_hosts.jpg)
 
 ## Now let us check if we can ping our servers
