@@ -258,13 +258,15 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 - ```https://docs.ansible.com/ansible/latest/user_guide/intro_adhoc.html``` 
 
 ## The best advantage of Ansible is that it is agentless, therefore we did not need to install Ansible or any dependencies on our servers/VMs and we still successfully ran various different commands on the servers from our Ansible machine.
-- ### Show time! quick excersise to practice some more Ad-hoc commands before we move onto Ansible Playbooks
-- Time 5-10 minutes
-- Run an Ad-hoc command in shell of all servers to find out the UPTIME of db server
-- Run an Ad-hoc command in shell of all servers to update and upgrade all packeges
-- TOP TIP- you can get help from above Ansible Doc link
-- 
-- Now its time to move onto next level to create and use Ansible Playbooks
+- Now we have good understanding of Ansible and the ad-hoc commands
+
+### 	Show time! quick exercise to practice some more Ad-hoc commands before we move onto Ansible Playbooks
+-	Time 5-10 minutes
+-	Find out the ```UPTIME``` of db server using Ansible Ad-hoc command.
+-	```update and upgrade all packages``` using Ansible Ad-hoc command.
+-	TOP TIP- You can get help from above Ansible Doc link or any other source from internet if required. 
+
+## Now its time to move onto next level to create and use Ansible Playbooks
 
 # Ansible Playbooks
 
