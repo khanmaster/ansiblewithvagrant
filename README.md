@@ -235,6 +235,7 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 
 ## So when do we actually need to utilise these quick Ad-hoc commands in Real life scenario?
 - If we have multiple servers running in different parts of the world and you need to perform some tasks out of business hours in each country/location.
+- for example: if you have 1 Server in North USA, 1 in Singapore and 1 in Germany
 - You will need to check few things before hand
 - Such as date and time in each of the zone before start to perform any tasks
 - Command to check date and time: ```ansible all -a "date"```
@@ -257,7 +258,12 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 - ```https://docs.ansible.com/ansible/latest/user_guide/intro_adhoc.html``` 
 
 ## The best advantage of Ansible is that it is agentless, therefore we did not need to install Ansible or any dependencies on our servers/VMs and we still successfully ran various different commands on the servers from our Ansible machine.
-
+- ### Show time! quick excersise to practice some more Ad-hoc commands before we move onto Ansible Playbooks
+- Time 5-10 minutes
+- Run an Ad-hoc command in shell of all servers to find out the UPTIME of db server
+- Run an Ad-hoc command in shell of all servers to update and upgrade all packeges
+- TOP TIP- you can get help from above Ansible Doc link
+- 
 - Now its time to move onto next level to create and use Ansible Playbooks
 
 # Ansible Playbooks
