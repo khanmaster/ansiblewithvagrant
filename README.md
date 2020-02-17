@@ -234,8 +234,12 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 - This is very useful command to find out the name and version of all Servers connected with Ansible, before performing any actions 
 
 ## So when do we actually need to utilise these quick Ad-hoc commands in Real life scenario?
-- If we have multiple servers running in different parts of the world and you need to perform some tasks out of business hours in each country/location.
-- for example: if you have 1 Server in North USA, 1 in Singapore and 1 in Germany
+
+### If we have multiple servers running in different parts of the world and you need to perform some tasks out of business hours in each country/location.
+
+![](https://github.com/spartaglobal/Ansible/blob/master/Ansible_multi_server.png)
+
+- for example: if you have 1 Server in USA, 1 in Singapore and 1 in Germany
 - You will need to check few things before hand
 - Such as date and time in each of the zone before start to perform any tasks
 - Command to check date and time: ```ansible all -a "date"```
