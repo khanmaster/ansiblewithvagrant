@@ -185,7 +185,11 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 
 - WOW! We have successfully created multi-server/client environment!
 
-## Back to Ansible now
+# Let us touch base on some common trouble shooting issues before we jump back to Ansible
+## Vagrant VM rebooting failure or unable to find private key etc.
+- Run this command  and reboot the VM ```echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null```
+
+# Back to Ansible now
 - back to Ubuntu shell 
 - install tree with ```sudo apt install tree ```
 
