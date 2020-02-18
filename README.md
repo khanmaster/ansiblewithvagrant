@@ -21,6 +21,7 @@ Timings 90-120 Minutes
 - Ansible Installation
 - Setting up SSH keys to access servers/VMs
 - Networking
+- Vagrant VMs touble shooting
 - Ansible Ad-hoc Commands 
 - Understanding Ansible file Directory/file Tree
 - Ansible Inventory file, Playbook, tasks and Module 
