@@ -189,7 +189,13 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 # Let us touch base on some common trouble shooting issues before we jump back to Ansible
 ## Vagrant VM rebooting failure or unable to find private key etc.
 - Run this command  and reboot the VM ```echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null```
-
+## you can also add following code to your vagrantfile to resolve the issue.
+``` 
+ config.vm.provider "virtualbox" do |v|
+    v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+end
+```
 # Back to Ansible now
 - back to Ubuntu shell 
 - install tree with ```sudo apt install tree ```
