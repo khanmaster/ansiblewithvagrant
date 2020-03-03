@@ -222,7 +222,15 @@ end
 - ``` ansible_connection=ssh ``` enables ansible to connect to the server with ssh key or password
 - ``` ansible_ssh_user=vagrant``` ```ansible_ssh_pass=vagrant``` enable you to connect to VMs with user ID vagrant and password vagrant
 ![](ansible_hosts.jpg)
-
+- Connect by private key
+``` bash 
+[web]
+192.168.33.10 ansible_ssh_private_key_file=/path/to/file
+[db]
+192.168.33.11 ansible_ssh_private_key_file=/path/to/file
+[aws]
+192.168.33.12 ansible_ssh_private_key_file=/path/to/file
+ ```
 ## Now let us check if we can ping our servers
 - Use this Command: ``` ping 192.168.33.10 ```
 - Use this Command: ``` ping 192.168.33.11 ```
