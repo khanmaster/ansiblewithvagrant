@@ -24,7 +24,7 @@ Timings 90-120 Minutes
 - press Y (yes) when prompted
 - Complete the installation and check with below command
 - ``` ansible –version ```
-![](images/Ansible_version.jpg)
+![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/Ansible_version.jpg)
 
 ## Above screen shows it has been installed successfully! 
 
