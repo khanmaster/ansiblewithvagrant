@@ -6,7 +6,7 @@
 - Virtual Box on windows
 - Vagrant Installed
 
-Timings 45-60 Minutes
+Timings 30-45 Minutes
 
 ## This Lesson Includes
 
@@ -14,7 +14,6 @@ Timings 45-60 Minutes
 - What is Ansible and why should we use it
 - Create a Git Hub Repository
 - Multi server environment
-- Installing Ubuntu 18.04 LTS app on Windows 
 - Creating Multiple servers/VMs using vagrant on Windows 
 
 ## What is “Infrastructure As Code” (IaC)?
@@ -24,7 +23,7 @@ Infrastructure as code (IaC) is the way of defining computing and network infras
 The guiding principle behind IaC is to enforce consistency among DevOps team members by representing the desired state of their infrastructure via code. Moreover, the code can be kept in source control, which means it can be audited, tested on, and used to create reproducible builds with continuous delivery.
 
 Let us walk through the architecture of our exercise 
-![](https://github.com/spartaglobal/Ansible/blob/master/IAC_Architecture.png)
+![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/IAC_Architecture.png)
 
 # What is Ansible
 ## Simple - Agentless - IT Automation Tool
