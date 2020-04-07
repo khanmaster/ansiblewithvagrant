@@ -161,7 +161,7 @@ end
 - Use this Command: ``` ping 192.168.33.11 ```
 
 ![](/https://github.com/spartaglobal/Ansible/blob/lesson1/images/ping_command.jpg)
-- Great!
+- Great! We have working multi-server env ready to play with Ansible in the next lacture!
 
 Summary: You have learned 
 
