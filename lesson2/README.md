@@ -34,7 +34,8 @@ Timings 90-120 Minutes
 
 You have practiced creating 1 VM and now lets take it to next level and use Ansible as provisioning and configuration management tool in multi server environment  
 - We will now create 3 Servers/VMs, web , db and aws using vagrant on windows
-- We will use Ubuntu as an ansible controller
+- We will use our vm called web as an ansible controller
+- we will connect with VMs called db and aws from our ansible controller 
 
 ## Open Git Bash and run it as an administrator
 In the same vagrantfile that you used to create 1 VM,  add the following code and comment out the previous code
@@ -97,8 +98,8 @@ end
 - It will take few minutes to create 3 VMs
 - check the stastus with below command 
 - ```vagrant status``` 
-![](images/vagrant_status.jpg)
-![](images/VB_status.jpg)
+![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/vagrant_status.jpg)
+![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/VB_status.jpg)
 
 ## Setup SSH keys/password in the host file.
 There are few different ways to set up connection and we will use the fast and easy set up to get going with actual Ansible provisioning.
@@ -115,7 +116,7 @@ The command edits the authorised keys file on the server. It creates the .ssh di
 - password: ```vagrant```
 ![](images/vagrant_ssh.jpg)
 - ```ssh vagrant@aws```
-![](images/ssh_aws.png)
+![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/ssh_aws.png)
 
 - WOW! We have successfully created multi-server/client environment!
 
@@ -137,7 +138,7 @@ end
 
 - Now go to ``` cd /etc/ansible$```
 - Type ```tree``` to see the file tree of ansible directory
-![](images/tree.jpg)
+![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/tree.jpg)
 
 - Ansible Inventory file - In the Ansible terminology, an inventory is a file where the target hosts of our actions are specified.
 - Its default path is ```/etc/ansible/hosts```
@@ -154,24 +155,24 @@ end
 - The IPs must match the hardcoded IPs defined in our vagrantfile to connect via SSH
 - ``` ansible_connection=ssh ``` enables ansible to connect to the server with ssh key or password
 - ``` ansible_ssh_user=vagrant``` ```ansible_ssh_pass=vagrant``` enable you to connect to VMs with user ID vagrant and password vagrant
-![](images/ansible_hosts.jpg)
+![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/ansible_hosts.jpg)
 
 ## Now let us check if we can ping our servers
 - Use this Command: ``` ping 192.168.33.10 ```
 - Use this Command: ``` ping 192.168.33.11 ```
 
-![](images/ping_command.jpg)
+![](/https://github.com/spartaglobal/Ansible/blob/lesson1/images/ping_command.jpg)
 - Great!
 
 ## Lets move on to Ansible Ad-hoc commands
 - Ping all servers/target hosts Check the connection/status:
 - command: ``` ansible all -m ping ```
-![](images/ansible_ping_all.png)
+![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/ansible_ping_all.png)
 - Amazing! We got a Pong in renponse of our Ping with a success message from all our servers
 - -m is the module.
 - How can we ping a particular server
 - ``` ansible aws -m ping ```
-![](images/ping_particular_server.png)
+![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/ping_particular_server.png)
 
 - To Check the name/version of all hosts OS machines
 - Command: ```ansible all -a "uname -a"```
