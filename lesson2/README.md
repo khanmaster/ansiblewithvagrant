@@ -14,21 +14,6 @@ Timings 90-120 Minutes
 - Vagrant VMs touble shooting
 
 
-# Installing Ansible on Ubuntu
-## Now Lets start from scratch 
-- ``` sudo apt-get update ```
-- ``` sudo apt-get install software-properties-common ```
-- ``` sudo apt-add-repository ppa:ansible/ansible ```
-- ``` sudo apt-get update ```
-- ``` sudo apt-get install ansible ```
-- press Y (yes) when prompted
-- Complete the installation and check with below command
-- ``` ansible –version ```
-![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/Ansible_version.jpg)
-
-## Above screen shows it has been installed successfully! 
-
-- We will come back to Ansible once we have our Multi VMs environment ready.
 
 ## Moving onto creating Multi Server/VMs on Windows using Vagrant:
 
@@ -132,8 +117,22 @@ The command edits the authorised keys file on the server. It creates the .ssh di
     v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
 end
 ```
-# Back to Ansible now
-- back to Ubuntu shell 
+# Installing Ansible on Ubuntu
+## Now Lets start from scratch 
+- ``` sudo apt-get update ```
+- ``` sudo apt-get install software-properties-common ```
+- ``` sudo apt-add-repository ppa:ansible/ansible ```
+- ``` sudo apt-get update ```
+- ``` sudo apt-get install ansible ```
+- press Y (yes) when prompted
+- Complete the installation and check with below command
+- ``` ansible –version ```
+![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/Ansible_version.jpg)
+
+## Above screen shows it has been installed successfully! 
+
+- We will come back to Ansible once we have our Multi VMs environment ready.
+
 - install tree with ```sudo apt install tree ```
 
 - Now go to ``` cd /etc/ansible$```
