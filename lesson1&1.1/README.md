@@ -56,16 +56,4 @@ Ansible can be used as a source control tool.
 ## Best Practices -  Create a new Git Hub Repository for Ansible
 - Create a cheat-sheet/go to guide for adhoc-commands, playbooks etc. this will build your Git Hub profile and history
 
-## Installation of Ubuntu 18.04 LTS on Windows
-Now we will install Ubuntu 18.04 LTS app on Windows and 
-Before we do that we need to enable some option on windows 
-- Right click on PowerShell to open it as an admin and run below command
-- ``` Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux ```
-
-## Next:
-- Type Microsoft Store on your search bar next to windows button on bottom left
-- Search for Ubuntu 18.04 LTS– below snap is taken after it was installed
-![](Ubuntu.jpg)
-## Follow installation steps
-Restart and login to Ubuntu
 
