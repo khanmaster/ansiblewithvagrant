@@ -13,9 +13,7 @@ Timings 30-45 Minutes
 - What is Infra structure As Code (IaC)
 - What is Ansible and why should we use it
 - Create a Git Hub Repository
-- Multi server environment
-- Creating Multiple servers/VMs using vagrant on Windows 
-
+- 
 ## What is “Infrastructure As Code” (IaC)?
 Infrastructure as code (IaC) is the way of defining computing and network infrastructure through source code, the same way you do for applications. Rather than manually configuring your infrastructure or using a one-off isolated script, IaC gives you the power to write code, using a high-level language, to decide how infrastructure should be configured and deployed.
 
@@ -52,7 +50,12 @@ Ansible can be used as a source control tool.
 - Ansible provides a common platform for enabling mature DevOps and infrastructure as code practices.
 - Ansible is easily integrated with higher-level orchestration systems, such as AWS Code-Build, Jenkins, or Red Hat.
 
-## Best Practices -  Create a new Git Hub Repository for Ansible
-- Create a cheat-sheet/go to guide for adhoc-commands, playbooks etc. this will build your Git Hub profile and history
+Summary: You have learned: 
+- 
+- What is Infra structure As Code (IaC)
+- What is Ansible and why should we use it
+- Advantages of Ansible in Automation world 
+- Create a Git Hub Repositor
+
 
 
