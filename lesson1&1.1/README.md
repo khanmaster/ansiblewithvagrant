@@ -55,6 +55,7 @@ Summary: You have learned:
 - What is Infra structure As Code (IaC)
 - What is Ansible and why should we use it
 - Advantages of Ansible in Automation world 
+- How Ansible fits into DevOps culture
 - Create a Git Hub Repositor
 
 
