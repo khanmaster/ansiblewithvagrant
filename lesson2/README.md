@@ -165,3 +165,10 @@ end
 - Great!
 
 Summary: You have learned 
+
+- Multi server environment
+- Creating Multiple servers/VMs using vagrant on Windows 
+- Ansible Installation
+- Setting up SSH keys to access servers/VMs
+- Networking
+- Vagrant VMs touble shooting
