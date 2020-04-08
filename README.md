@@ -37,7 +37,7 @@ Infrastructure as code (IaC) is the way of defining computing and network infras
 The guiding principle behind IaC is to enforce consistency among DevOps team members by representing the desired state of their infrastructure via code. Moreover, the code can be kept in source control, which means it can be audited, tested on, and used to create reproducible builds with continuous delivery.
 
 Let us walk through the architecture of our exercise 
-![](https://github.com/spartaglobal/Ansible/blob/master/IAC_Architecture.png)
+![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/IAC_Architecture.png)
 
 # What is Ansible
 ## Simple - Agentless - IT Automation Tool
@@ -240,7 +240,7 @@ end
 
 ### If we have multiple servers running in different parts of the world and you need to perform some tasks out of business hours in each country/location.
 
-![](https://github.com/spartaglobal/Ansible/blob/master/Ansible_multi_server.png)
+![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/Ansible_multi_server.png)
 
 - for example: if you have 1 Server in USA, 1 in Singapore and 1 in Germany
 - You will need to check few things before hand
@@ -255,7 +255,7 @@ end
 - As you could see we are running the free -m command on the remote hosts and collecting the information.
 - This is ```best practice``` to check the available space before installing any packages.
 - command: ```ansible all -a "free -a"```
-![](images/free_memory.png)
+![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/free_memory.png)
 - How to check existing directories in all our servers using command inside the VMs shell from Ansible machine 
 - command: ``` ansible all -m shell -a "ls -a" ```
 ![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/check_dir.png)
