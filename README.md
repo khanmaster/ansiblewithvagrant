@@ -1,4 +1,7 @@
-# Please use the folders for break down of lessons from lesson 1-3. each lesson has a separate README file and content of the particular lacture. This page has all lessons together.
+## Note: Please use the folders for break down of lessons from lesson 1-3. 
+
+### Each lesson has a separate README file and content of the particular lacture.
+### This page has all lessons together.
 
 # Infra Structure as Code - Ansible Configuration Management
 
