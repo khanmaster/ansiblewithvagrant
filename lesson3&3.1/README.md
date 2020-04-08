@@ -1,3 +1,15 @@
+# Ansible use cases in real life.   
+
+## In this lacture we will learn:
+
+-	What is a Ad-hoc command 
+-	Use of Ad-hoc commands in real life
+-	What is inventory file and use case
+-	Ansible Dir/File tree
+-	Playbook’s Tasks, Modules
+-	Ad-hoc commands vs playbooks
+-	Installing SQL, NGINX using playbooks
+
 ## Lets move on to Ansible Ad-hoc commands
 - Ping all servers/target hosts Check the connection/status:
 - command: ``` ansible all -m ping ```
@@ -11,7 +23,7 @@
 - To Check the name/version of all hosts OS machines
 - Command: ```ansible all -a "uname -a"```
 - -a should contain the command it should run which goes as an argument to command and shell.
-![](images/ansible_all_uname.png)
+![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/ansible_all_uname.png)
 - This is very useful command to find out the name and version of all Servers connected with Ansible, before performing any actions 
 
 ## So when do we actually need to utilise these quick Ad-hoc commands in Real life scenario?
@@ -24,7 +36,7 @@
 - You will need to check few things before hand
 - Such as date and time in each of the zone before start to perform any tasks
 - Command to check date and time: ```ansible all -a "date"```
-![](images/ansible_date.png)
+![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/ansible_date.png)
 
 - if you have been tasked to install mysql on all servers or 1 server
 - What pre checks would be required to get done ``` Memory availability``` ```disk available space``` etc.
