@@ -45,10 +45,10 @@
 - As you could see we are running the free -m command on the remote hosts and collecting the information.
 - This is ```best practice``` to check the available space before installing any packages.
 - command: ```ansible all -a "free -a"```
-![](images/free_memory.png)
+![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/free_memory.png)
 - How to check existing directories in all our servers using command inside the VMs shell from Ansible machine 
 - command: ``` ansible all -m shell -a "ls -a" ```
-![](images/check_dir.png)
+![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/check_dir.png)
 
 ## Amazing isn’t it! How smartly we have been communicating with our VMs with Ansible using Ad-hoc commands
 - There are plenty more Ad-hoc commands available on Ansible doc page
@@ -105,13 +105,13 @@
 ```
 - Save the file as playbook_installmysql.yml in ```/etc/ansible```
 - Run the playbook with this command:``` ansible-playbook playbook_installmysql.yml ```
-![](images/playbook_mysql.png)
+![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/playbook_mysql.png)
 
 - Mysql has been installed on db server, now lets login to db server from our Ansible machine via ssh
 - ```ssh vagrant@db```
 - Enter the passord: ```vagrant```
 - Verfiy if mysql has been installed with this command: ```mysql --version```
-![](images/verify_mysql.png)
+![](https://github.com/spartaglobal/Ansible/blob/lesson1/images/verify_mysql.png)
 ## Great! 
 
 # Its show time
