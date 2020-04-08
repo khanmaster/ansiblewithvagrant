@@ -131,8 +131,6 @@ end
 
 ## Above screen shows it has been installed successfully! 
 
-- We will come back to Ansible once we have our Multi VMs environment ready.
-
 - install tree with ```sudo apt install tree ```
 
 - Now go to ``` cd /etc/ansible$```
